@@ -1,7 +1,6 @@
 import scrapy
 from scrapy import Spider
-from scrapy.http import Request
-from udemy_scraper.items import UdemyScraperItem
+
 
 
 class BooksSpider(Spider):
