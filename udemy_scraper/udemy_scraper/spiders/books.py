@@ -2,7 +2,6 @@ import scrapy
 from scrapy import Spider
 
 
-
 class BooksSpider(Spider):
     name = "books"
     allowed_domains = ["books.toscrape.com"]
