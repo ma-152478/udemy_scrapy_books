@@ -25,8 +25,7 @@ class BooksSpider(Spider):
     def parse_detail(self,response):
         l = ItemLoader(item=UdemyScraperItem(), response = response)
         name = response.xpath('.//*[@class="col-sm-6 product_main"]/h1/text()').extract_first()        
-        category = response.xpath('.//*[@class="breadcrumb"]/li[3]/a/text()').extract_first()
-        
+        category = response.xpath('.//*[@class="breadcrumb"]/li[3]/a/text()').extract_first()        
         availability = response.xpath('.//*[@class="table table-striped"]/tr[6]/td/text()').extract_first()
         price = response.xpath('.//*[@class="table table-striped"]/tr[4]/td/text()').extract()        
         temp_rating = response.xpath('.//*[@class="col-sm-6 product_main"]/p[3]/@class').extract()        
